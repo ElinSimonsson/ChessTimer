@@ -11,11 +11,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var p1TimerLabel: UILabel!
     @IBOutlet weak var p2TimerLabel: UILabel!
+    @IBOutlet weak var buttonP1: UIButton!
+    @IBOutlet weak var buttonP2: UIButton!
     
     var timerP1 : Timer?
     var timerP2 : Timer?
-    var totalTimeP1 = 180 // seconds
-    var totalTimeP2 = 180 // seconds
+    var totalTimeP1 = 10 // seconds
+    var totalTimeP2 = 10 // seconds
     var isPausedP1 = false
     
     override func viewDidLoad() {
@@ -29,14 +31,19 @@ class ViewController: UIViewController {
     
     private func startP1Timer() {
         self.timerP1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerP1), userInfo: nil, repeats: true)
+        buttonP2.isHidden = true
     }
     
     @objc func updateTimerP1() {
         self.p1TimerLabel.text = self.timeFormatted(self.totalTimeP1) // will show timer
         if totalTimeP1 != 0 {
-            totalTimeP1 -= 1  
+            totalTimeP1 -= 1
         } else {
             if let timerP1 = self.timerP1 {
+                self.timerP2 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerP2), userInfo: nil, repeats: true)
+                isPausedP1 = true
+                buttonP1.isHidden = true
+                buttonP2.isHidden = false
                 timerP1.invalidate()
                 self.timerP1 = nil
             }
@@ -48,9 +55,9 @@ class ViewController: UIViewController {
         if totalTimeP2 != 0 {
             totalTimeP2 -= 1
         } else {
-            if let timerP1 = self.timerP1 {
-                timerP1.invalidate()
-                self.timerP1 = nil
+            if let timerP2 = self.timerP2 {
+                timerP2.invalidate()
+                self.timerP2 = nil
             }
         }
     }
@@ -71,6 +78,8 @@ class ViewController: UIViewController {
                             isPausedP1 = true
                         }
             self.timerP2 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimerP2), userInfo: nil, repeats: true)
+            buttonP1.isHidden = true
+            buttonP2.isHidden = false
         }
         
     }
@@ -85,6 +94,8 @@ class ViewController: UIViewController {
             if let timerP2 = self.timerP2 {
                             timerP2.invalidate()
                         }
+            buttonP1.isHidden = false
+            buttonP2.isHidden = true
         }
     }
 }
