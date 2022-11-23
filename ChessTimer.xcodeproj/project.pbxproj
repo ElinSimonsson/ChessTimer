@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F53D56E292E2BA90035E61A /* International Chess Background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F53D56D292E2BA90035E61A /* International Chess Background.jpeg */; };
 		3FF2216B292D0BD1009A45E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2216A292D0BD1009A45E3 /* AppDelegate.swift */; };
 		3FF2216D292D0BD1009A45E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2216C292D0BD1009A45E3 /* SceneDelegate.swift */; };
 		3FF2216F292D0BD1009A45E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2216E292D0BD1009A45E3 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F53D56D292E2BA90035E61A /* International Chess Background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "International Chess Background.jpeg"; path = "../../../Downloads/International Chess Background.jpeg"; sourceTree = "<group>"; };
 		3FF22167292D0BD1009A45E3 /* ChessTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF2216A292D0BD1009A45E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FF2216C292D0BD1009A45E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				3FF2216E292D0BD1009A45E3 /* ViewController.swift */,
 				3FF22170292D0BD1009A45E3 /* Main.storyboard */,
 				3FF22173292D0BD8009A45E3 /* Assets.xcassets */,
+				3F53D56D292E2BA90035E61A /* International Chess Background.jpeg */,
 				3FF22175292D0BD8009A45E3 /* LaunchScreen.storyboard */,
 				3FF22178292D0BD8009A45E3 /* Info.plist */,
 			);
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FF22177292D0BD8009A45E3 /* LaunchScreen.storyboard in Resources */,
+				3F53D56E292E2BA90035E61A /* International Chess Background.jpeg in Resources */,
 				3FF22174292D0BD8009A45E3 /* Assets.xcassets in Resources */,
 				3FF22172292D0BD1009A45E3 /* Main.storyboard in Resources */,
 			);
